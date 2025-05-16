@@ -21,3 +21,35 @@ Content-Type: application/json
 ###
 
 DELETE http://localhost:5050/users/0bf147d2-5058-4267-b7f7-eb40f8bfdb92
+
+
+### Creación y configuración de tablas
+# Crear tabla products
+POST http://localhost:5050/setup/products
+
+### Agregar productos de muestra
+POST http://localhost:5050/setup/products/sample
+
+### Crear tabla users
+POST http://localhost:5050/setup/users
+
+### Agregar usuarios de muestra
+POST http://localhost:5050/setup/users/sample
+
+### Crear tabla orders
+POST http://localhost:5050/setup/orders
+
+### Agregar órdenes de muestra
+POST http://localhost:5050/setup/orders/sample
+
+### Tarea 1: Obtener todos los registros de una tabla
+GET http://localhost:5050/products
+
+### Tarea 2: Filtrar por una condición simple
+GET http://localhost:5050/products/under-50
+
+### Tarea 3: Seleccionar campos específicos
+GET http://localhost:5050/users/username-email
+
+### Tarea 4: Ordenar resultados por una columna
+GET http://localhost:5050/orders/by-date
